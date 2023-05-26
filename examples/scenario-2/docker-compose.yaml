@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2022 Open Energy Solutions Inc
+#
+# SPDX-License-Identifier: Apache-2.0
+
+version: "3.4"
+services:
+  adapters:    
+    image: oesinc/openfmb.adapters.ext:pre-release
+    ports:
+      - "8255:8255/udp"
+      - "20000:20000"  
+    expose:
+      - 20000  
+    volumes:
+      - ./tmp:/tmp              # map to shared mem for zenoh   
+      - ./adapters:/adapters        # map to adapter configurations
+      - ./launcher:/launcher    # launcher configuration
+    command: -c /launcher/config.yaml
+    environment:
+      - RUST_LOG=debug

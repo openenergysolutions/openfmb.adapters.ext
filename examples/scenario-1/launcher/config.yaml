@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2022 Open Energy Solutions Inc
+#
+# SPDX-License-Identifier: Apache-2.0
+
+---
+launcher:
+  log_level: Debug
+adapters: 
+  - name: oes-plug
+    type: oes-plug
+    config: /adapters/udp-adapter.yaml
+  - name: bridge-master
+    type: pub-sub-bridge    
+    config: /adapters/bridge-adapter.yaml  
+...
+

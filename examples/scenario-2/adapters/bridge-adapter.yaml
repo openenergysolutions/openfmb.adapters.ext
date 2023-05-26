@@ -1,0 +1,31 @@
+---
+logging:
+  logger-name: "application"  # name of the logger
+  console:
+    enabled: true  # enable console logging
+  rotating-file:
+    enabled: false  # enable rotating files logging
+    path: "adapter.log"  # filename to use
+    max-size: 1048576  # maximum size of a single file in bytes
+    max-files: 3  # maximum number of files to keep before starting to remove old data
+plugins:
+  dnp3-outstation:
+    enabled: true
+    thread-pool-size: 1
+    outstations:
+    - path: /adapters/dnp3-outstation-template.yaml
+      session-name: Session
+      overrides: []       
+  zenoh:
+    enabled: true  # enable this plugin 
+    max-queued-messages: 100  # how many messages to buffer before discarding the oldest    
+    connect-retry-seconds: 5  # number of seconds to wait before trying to re-establish a connection to the server
+    publish:
+    - profile: SwitchDiscreteControlProfile
+      subject: 5f7436ec-7bf2-4f23-a5c4-fbf25d909ba2  
+    subscribe:
+    - profile: SwitchReadingProfile
+      subject: 5f7436ec-7bf2-4f23-a5c4-fbf25d909ba2
+    - profile: SwitchStatusProfile
+      subject: 5f7436ec-7bf2-4f23-a5c4-fbf25d909ba2      
+...
