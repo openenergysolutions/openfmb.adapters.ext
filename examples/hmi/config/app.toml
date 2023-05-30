@@ -5,4 +5,4 @@ log-level = "Debug" # Off, Error, Info, Debug, Trace
 server_port = 32771
 
 [nats]
-dev_uri = "nats://192.168.86.39:4222"
+dev_uri = "nats://REPLACE_HOST_IP_ADDRESS:4222"

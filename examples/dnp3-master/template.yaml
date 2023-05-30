@@ -9,7 +9,7 @@ polls:
     class3: false
 channel:
   adapter: 0.0.0.0
-  outstation-ip: 192.168.86.39
+  outstation-ip: REPLACE_HOST_IP_ADDRESS
   port: 20000
 protocol:
   master-address: 1

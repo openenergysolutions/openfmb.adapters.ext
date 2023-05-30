@@ -3,12 +3,12 @@ adapter-port: 8555
 uncontrollable-plugs:
   - mac-address: 80c955645cd4
     mrid: 5f7436ec-7bf2-4f23-a5c4-fbf25d909ba2
-    ip-address: 192.168.86.39
+    ip-address: REPLACE_HOST_IP_ADDRESS
     port: 8556
 controllable-plugs:
   - mac-address: 80c955645cd4
     mrid: 5f7436ec-7bf2-4f23-a5c4-fbf25d909ba2
-    ip-address: 192.168.86.39
+    ip-address: REPLACE_HOST_IP_ADDRESS
     port: 8556
 file:
   id: openfmb-adapter-template

@@ -3,7 +3,7 @@
         "FilePath": "/config/config.json",
         "Name": "OES-Plug",
         "MacAddress": "80c955645cd4",
-        "HostIpAddress": "192.168.86.39",
+        "HostIpAddress": "REPLACE_HOST_IP_ADDRESS",
         "BroadcastIntervalMs": 1000,
         "Port": 8556,
         "Voltage": 120,
