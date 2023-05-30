@@ -4,7 +4,7 @@ This repo consists of a Dockerfile that is used to build an "Extension" for Open
 
 ## Objectives:
 
-The objective is to enhance an existing OpenFMB Adapter Framework by extending its capabilities to support multiple protocols, regardless of the programming language used. This expansion will allow seamless integration with various systems and enable communication using different protocols.
+The objective is to enhance an existing [OpenFMB Adapter Framework](https://github.com/openenergysolutions/openfmb.adapters) by extending its capabilities to support multiple protocols, regardless of the programming language used. This expansion will allow seamless integration with various systems and enable communication using different protocols.
 
 One key aspect of this extension is the ability to leverage the existing OpenFMB Adapter Framework's functionalities, such as MQTT, NATS, DNP3, MODBUS, and more. These features provide robust communication channels and protocol-specific implementations that can be utilized by the newly added plugins or extensions.
 
@@ -141,4 +141,4 @@ docker-compose up
 
 ## HMI Screen
 
-![image](https://github.com/openenergysolutions/openfmb.adapters.ext/assets/43071770/1da9241b-f600-4630-8c36-5c7b6994a1f9)
+![image](https://github.com/openenergysolutions/openfmb.adapters.ext/assets/43071770/ce1ddce1-bf9d-43d7-ba52-334265882861)
