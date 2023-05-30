@@ -1,7 +1,7 @@
 file:
   id: openfmb-adapter-main
-  edition: 2.0
-  version: 1.0.0.0
+  edition: 2.1
+  version: 2.1.0.0
   plugin: ''
 plugins:  
   oes-plug:

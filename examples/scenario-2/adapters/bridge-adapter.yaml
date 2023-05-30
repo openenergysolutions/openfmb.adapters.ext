@@ -1,4 +1,9 @@
 ---
+file:
+  id: openfmb-adapter-main
+  edition: 2.1
+  version: 2.1.0.0
+  plugin: ''
 logging:
   logger-name: "application"  # name of the logger
   console:

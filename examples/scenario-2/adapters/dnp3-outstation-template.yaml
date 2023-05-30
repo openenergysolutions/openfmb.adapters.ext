@@ -232,6 +232,17 @@ profiles:
               quality-field-type: ignored
             t:
               timestamp-field-type: ignored
+          res:
+            cVal:
+              ang:
+                value:
+                  double-field-type: ignored
+              mag:
+                double-field-type: ignored
+            q:
+              quality-field-type: ignored
+            t:
+              timestamp-field-type: ignored
         ClcMth:
           setVal:
             enum-field-type: ignored
@@ -304,6 +315,17 @@ profiles:
               quality-field-type: ignored
             t:
               timestamp-field-type: ignored
+          res:
+            cVal:
+              ang:
+                value:
+                  double-field-type: ignored
+              mag:
+                double-field-type: ignored
+            q:
+              quality-field-type: ignored
+            t:
+              timestamp-field-type: ignored
         PFSign:
           setVal:
             enum-field-type: ignored
@@ -353,6 +375,17 @@ profiles:
             t:
               timestamp-field-type: ignored
           phsC:
+            cVal:
+              ang:
+                value:
+                  double-field-type: ignored
+              mag:
+                double-field-type: ignored
+            q:
+              quality-field-type: ignored
+            t:
+              timestamp-field-type: ignored
+          res:
             cVal:
               ang:
                 value:
@@ -453,6 +486,17 @@ profiles:
               quality-field-type: ignored
             t:
               timestamp-field-type: ignored
+          res:
+            cVal:
+              ang:
+                value:
+                  double-field-type: ignored
+              mag:
+                double-field-type: ignored
+            q:
+              quality-field-type: ignored
+            t:
+              timestamp-field-type: ignored
         VAr:
           net:
             cVal:
@@ -509,6 +553,17 @@ profiles:
               quality-field-type: ignored
             t:
               timestamp-field-type: ignored
+          res:
+            cVal:
+              ang:
+                value:
+                  double-field-type: ignored
+              mag:
+                double-field-type: ignored
+            q:
+              quality-field-type: ignored
+            t:
+              timestamp-field-type: ignored
         W:
           net:
             cVal:
@@ -555,6 +610,17 @@ profiles:
             t:
               timestamp-field-type: ignored
           phsC:
+            cVal:
+              ang:
+                value:
+                  double-field-type: ignored
+              mag:
+                double-field-type: ignored
+            q:
+              quality-field-type: ignored
+            t:
+              timestamp-field-type: ignored
+          res:
             cVal:
               ang:
                 value:
@@ -1162,6 +1228,17 @@ profiles:
               quality-field-type: ignored
             t:
               timestamp-field-type: ignored
+          res:
+            cVal:
+              ang:
+                value:
+                  double-field-type: ignored
+              mag:
+                double-field-type: ignored
+            q:
+              quality-field-type: ignored
+            t:
+              timestamp-field-type: ignored
         ClcMth:
           setVal:
             enum-field-type: ignored
@@ -1234,6 +1311,17 @@ profiles:
               quality-field-type: ignored
             t:
               timestamp-field-type: ignored
+          res:
+            cVal:
+              ang:
+                value:
+                  double-field-type: ignored
+              mag:
+                double-field-type: ignored
+            q:
+              quality-field-type: ignored
+            t:
+              timestamp-field-type: ignored
         PFSign:
           setVal:
             enum-field-type: ignored
@@ -1286,6 +1374,17 @@ profiles:
             t:
               timestamp-field-type: ignored
           phsC:
+            cVal:
+              ang:
+                value:
+                  double-field-type: ignored
+              mag:
+                double-field-type: ignored
+            q:
+              quality-field-type: ignored
+            t:
+              timestamp-field-type: ignored
+          res:
             cVal:
               ang:
                 value:
@@ -1386,6 +1485,17 @@ profiles:
               quality-field-type: ignored
             t:
               timestamp-field-type: ignored
+          res:
+            cVal:
+              ang:
+                value:
+                  double-field-type: ignored
+              mag:
+                double-field-type: ignored
+            q:
+              quality-field-type: ignored
+            t:
+              timestamp-field-type: ignored
         VAr:
           net:
             cVal:
@@ -1432,6 +1542,17 @@ profiles:
             t:
               timestamp-field-type: ignored
           phsC:
+            cVal:
+              ang:
+                value:
+                  double-field-type: ignored
+              mag:
+                double-field-type: ignored
+            q:
+              quality-field-type: ignored
+            t:
+              timestamp-field-type: ignored
+          res:
             cVal:
               ang:
                 value:
@@ -1491,6 +1612,17 @@ profiles:
             t:
               timestamp-field-type: ignored
           phsC:
+            cVal:
+              ang:
+                value:
+                  double-field-type: ignored
+              mag:
+                double-field-type: ignored
+            q:
+              quality-field-type: ignored
+            t:
+              timestamp-field-type: ignored
+          res:
             cVal:
               ang:
                 value:
