@@ -92,7 +92,7 @@ profiles:
             ctlVal:
               bool-field-type: mapped
               command-source-type: crob
-              profile-action: update
+              profile-action: update_and_publish
               index: 0
               mapping:
               - operation-type: LATCH_ON

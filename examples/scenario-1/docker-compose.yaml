@@ -4,6 +4,14 @@
 
 version: "3.4"
 services:
+  udp-plug-simulator:
+    image: oesinc/plug-simulator
+    container_name: 'oes-plug'
+    command: [-c, /config/config.json]
+    volumes:
+      - ../plug-simulator/config.json:/config/config.json
+    # Important! need to use host network
+    network_mode: "host"
   nats:
     image: nats
     ports:
@@ -13,7 +21,7 @@ services:
   adapters:    
     image: oesinc/openfmb.adapters.ext:pre-release
     ports:
-      - "8255:8255/udp"    
+      - "8555:8555/udp"    
     volumes:
       - ./tmp:/tmp              # map to shared mem for zenoh   
       - ./adapters:/adapters        # map to adapter configurations

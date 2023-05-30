@@ -58,7 +58,7 @@ WORKDIR /home/supervisor
 RUN cargo build --release
 
 # build running image
-FROM debian:buster-slim
+FROM debian:11-slim
 
 RUN apt-get update && apt-get install -y libpq5
 

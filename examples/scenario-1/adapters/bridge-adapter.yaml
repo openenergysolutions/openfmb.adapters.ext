@@ -16,8 +16,7 @@ plugins:
     client-id: "client1" 
     connect-retry-delay-ms: 5000
     security:
-      security-type: none
-    publish:
+      security-type: none    
     publish:
     - profile: SwitchReadingProfile
       subject: 5f7436ec-7bf2-4f23-a5c4-fbf25d909ba2
@@ -32,8 +31,7 @@ plugins:
     connect-url: nats://nats  # URL to the NATS server
     connect-retry-seconds: 5  # number of seconds to wait before trying to re-establish a connection to the server
     security:      
-      security-type: none
-    publish:
+      security-type: none    
     publish:
     - profile: SwitchReadingProfile
       subject: 5f7436ec-7bf2-4f23-a5c4-fbf25d909ba2
