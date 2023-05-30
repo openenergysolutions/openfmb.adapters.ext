@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2022 Open Energy Solutions Inc
+#
+# SPDX-License-Identifier: Apache-2.0
+
+version: "3.4"
+services:
+  hmi:    
+    image: oesinc/openfmb.hmi:v2.1-rc1
+    ports:
+      - "32771:32771"
+    expose:
+      - 32771    
+    volumes:
+      - .:/cfg               
+    command: -c /launcher/config.yaml
+    environment:
+      APP_CONF: /cfg/config/app.toml
+      APP_DIR_NAME: /cfg

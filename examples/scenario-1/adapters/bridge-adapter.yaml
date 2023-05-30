@@ -17,7 +17,7 @@ plugins:
   mqtt:
     enabled: false  # enable this plugin
     max-queued-messages: 100  
-    server-address: tcp://192.168.87.23:1883  
+    server-address: tcp://mqtt  
     client-id: "client1" 
     connect-retry-delay-ms: 5000
     security:

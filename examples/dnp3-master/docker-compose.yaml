@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2022 Open Energy Solutions Inc
+#
+# SPDX-License-Identifier: Apache-2.0
+
+version: "3.4"
+services:
+  nats:
+    image: nats
+    ports:
+      - "4222:4222"
+    expose:
+      - 4222
+  dnp3-master-adapter:    
+    image: oesinc/openfmb.adapters:v2.1   
+    volumes:
+      - .:/openfmb               
+    command: -c /openfmb/adapter.yaml
