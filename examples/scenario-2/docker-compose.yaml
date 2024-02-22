@@ -5,7 +5,7 @@
 version: "3.4"
 services:
   udp-plug-simulator:
-    image: oesinc/plug-simulator
+    image: oesinc/udp-plug-simulator
     container_name: 'oes-plug'
     command: [-c, /config/config.json]
     volumes:
