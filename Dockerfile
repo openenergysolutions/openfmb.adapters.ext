@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-FROM rust:1.69 as builder
+FROM rust:1.70 as builder
 
 ARG NUM_CORES=1
 
