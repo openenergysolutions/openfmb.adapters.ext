@@ -47,6 +47,7 @@ adapters:
     config: /adapters/bridge-adapter.yaml 
 ...
 ```
+
 The following adapter types (`adapters.type`) are supported by the launcher:
 
 - dnp3-master (DNP3)
@@ -81,7 +82,8 @@ To demonstrate, consider these two scenarios:
 ### Scenario 1
 
 To be able to monitor the OES fictitious smart plug data, and turn it on/off using OpenFMB via NATS pub/sub protocol:
-   - Note that the UDP OpenFMB Adapter doesn't support NATS.  We are utilizing the protocol-bridge functionality of the OpenFMB Adapter Framework extension
+
+- Note that the UDP OpenFMB Adapter doesn't support NATS.  We are utilizing the protocol-bridge functionality of the OpenFMB Adapter Framework extension
 
 To run the adapters, run:
 
@@ -91,6 +93,7 @@ docker-compose up
 ```
 
 The `docker-compose` command shall start:
+
 - an UDP Plug simulator (software simulator of the OES fictitious smart plug)
 - a NATS broker
 - an UDP extension adapter
@@ -106,8 +109,9 @@ docker-compose up
 ### Scenario 2
 
 To be able to monitor the OES fictitious smart plug data and turn it on/off using DNP3 protocol
-   - We are internally translating UDP datagram into DNP3
-   - The OpenFMB adapter acts as a DNP3 outstation to serve data to a connected DNP3 master program
+
+- We are internally translating UDP datagram into DNP3
+- The OpenFMB adapter acts as a DNP3 outstation to serve data to a connected DNP3 master program
 
 To run the adapters, run:
 
@@ -115,16 +119,20 @@ To run the adapters, run:
 cd examples/scenario-2
 docker-compose up
 ```
+
 The `docker-compose` command shall start:
+
 - an UDP Plug simulator (software simulator of the OES fictitious smart plug)
 - an UDP extension adapter exposes its data as a DNP3 outstation
     
 The DNP3 outstation data points:
+
 - Binary Input 0 for the plug status ON/OFF
 - Binary Output 0 to turn the plug ON/OFF
 - Analog Inputs: Current = 0; Voltage: 1; Power: 2
 
 To interrogate data, use a DNP3 master software to connect to the outstation:
+
 - IP address: same as `<MY_COMPUTER_IP_ADDRESS>` above
 - Port: 20000
 - Master Address: 1

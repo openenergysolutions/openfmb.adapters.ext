@@ -39,22 +39,25 @@ RUN conan remote update conancenter https://center.conan.io false
 RUN conan remote add bincrafters https://bincrafters.jfrog.io/artifactory/api/conan/public-conan false
 RUN conan config set general.revisions_enabled=1
 
-# build the application
-COPY internal-openfmb.adapters /home/openfmb.adapters
+# build the openfmb adapters
+WORKDIR /home
+RUN git clone --recursive https://github.com/openenergysolutions/openfmb.adapters.git
 WORKDIR /home/openfmb.adapters/build
 RUN conan install --build missing ..
 RUN cmake -DCMAKE_BUILD_TYPE=Release -DOPENFMB_LINK_STATIC=ON -DOPENFMB_USE_CONAN=ON -DMODBUS_VENDORED_DEPS=ON ..
 RUN cmake --build . --parallel "$NUM_CORES"
 
 # UDP plug-in
-COPY openfmb.adapters.udp /home/openfmb.adapters.udp
+WORKDIR /home
+RUN git clone https://github.com/openenergysolutions/openfmb.adapters.udp.git
 WORKDIR /home/openfmb.adapters.udp
 RUN rm -rf target
 RUN cargo build --release
 
 # supervisor
-COPY openfmb.adapters.launcher /home/supervisor
-WORKDIR /home/supervisor
+WORKDIR /home
+RUN git clone https://github.com/openenergysolutions/openfmb.adapters.launcher.git
+WORKDIR /home/openfmb.adapters.launcher
 RUN cargo build --release
 
 # build running image
@@ -65,7 +68,7 @@ RUN apt-get update && apt-get install -y libpq5
 # copy executables
 COPY --from=builder /home/openfmb.adapters/build/application/openfmb-adapter /usr/bin/
 COPY --from=builder /home/openfmb.adapters.udp/target/release/udp-adapter /usr/bin/udp-adapter
-COPY --from=builder /home/supervisor/target/release/adapters-launcher /usr/bin/
+COPY --from=builder /home/openfmb.adapters.launcher/target/release/adapters-launcher /usr/bin/
 
 EXPOSE 102
 
