@@ -19,7 +19,7 @@ services:
     expose:
       - 4222
   adapters:    
-    image: oesinc/openfmb.adapters.ext:pre-release
+    image: oesinc/openfmb.adapters.ext
     ports:
       - "8555:8555/udp"    
     volumes:

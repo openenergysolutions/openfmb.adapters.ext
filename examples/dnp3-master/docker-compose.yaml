@@ -11,7 +11,7 @@ services:
     expose:
       - 4222
   dnp3-master-adapter:    
-    image: oesinc/openfmb.adapters:v2.1   
+    image: oesinc/openfmb.adapters  
     volumes:
       - .:/openfmb               
     command: -c /openfmb/adapter.yaml

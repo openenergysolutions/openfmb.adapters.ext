@@ -89,7 +89,7 @@ To run the adapters, run:
 
 ```bash
 cd examples/scenario-1
-docker-compose up
+docker-compose up -d
 ```
 
 The `docker-compose` command shall start:
@@ -102,9 +102,17 @@ Now, to monitor the smart plug as well as turn it ON/OFF, we can stand up an OES
 
 ```bash
 cd ../hmi
-docker-compose up
+docker-compose up -d
 ```
 
+The HMI can then be opened at:
+
+<http://127.0.0.1:32771>
+
+```bash
+Username: admin
+Password: hm1admin
+```
 
 ### Scenario 2
 
@@ -117,14 +125,14 @@ To run the adapters, run:
 
 ```bash
 cd examples/scenario-2
-docker-compose up
+docker-compose up -d
 ```
 
 The `docker-compose` command shall start:
 
 - an UDP Plug simulator (software simulator of the OES fictitious smart plug)
 - an UDP extension adapter exposes its data as a DNP3 outstation
-    
+
 The DNP3 outstation data points:
 
 - Binary Input 0 for the plug status ON/OFF
@@ -144,7 +152,16 @@ Now, to monitor the smart plug as well as turn it ON/OFF, we can stand up an OES
 cd ../dnp-master
 docker-compose up -d
 cd ../hmi
-docker-compose up
+docker-compose up -d
+```
+
+The HMI can then be opened at:
+
+<http://127.0.0.1:32771>
+
+```bash
+Username: admin
+Password: hm1admin
 ```
 
 ## HMI Screen
